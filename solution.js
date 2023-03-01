@@ -50,7 +50,7 @@ function twoMakesTen(a, b){
 }else{
   return false
   }
-}
+} 
 console.log(twoMakesTen(9,10))
 console.log(twoMakesTen(9,9))
 console.log(twoMakesTen(1,9))
@@ -105,14 +105,13 @@ console.log(stringLength("pears"))
 console.log(stringLength("cherry"))
 
 function lastChar(string){
-  let result = string.charAt(string.length - 1)
-  if(string === "n"){
+  if(string === string.endsWith("n") || string.endsWith("N") )
 
   return true
 }else{
   return false
   }
-}
+
 console.log(lastChar("Aiden"))
 console.log(lastChar("Piet"))
 console.log(lastChar("Bert"))
@@ -156,17 +155,15 @@ console.log(reverse("Hello World"))
 console.log(reverse("The quick brown fox"))
 console.log(reverse("Edabit is really helpfull"))
 
-//function journeyDistance(cost){
-  //let firstDistance = cost1
+function journeyDistance(cost){
   
-  //let distance =  (2 * (cost - 3))/3
-  //if(cost === distance){
-  //}
-    //return distance
-//}
-  //console.log(journeyDistance(3))
-  //console.log(journeyDistance(9))
-  //console.log(journeyDistance(5))
+  let distance =  ((cost - 3)/2)+1
+  return distance
+  }
+    
+  console.log(journeyDistance(3))
+  console.log(journeyDistance(9))
+  console.log(journeyDistance(5))
 
 function days( month, year){
   let noOfDays = new Date (year, month, 0).getDate()
@@ -254,16 +251,20 @@ console.log(middleChar("middle"))
 console.log(middleChar("A"))
 
 function defaultMood(mood){
-  let newS = `Today, I am feeling ${mood}.`
-  
-  return newS
-//}else{
- //return "Today, I am feeling neutral"
-//}
+  if(mood !== null){
+
+  }
+  let result = "Today, I am feeling" + mood
+  return result
 }
+else{
+ return "Today, I am feeling neutral"
+}
+
+
 console.log(defaultMood("Happy"))
 console.log(defaultMood("sad"))
-console.log(defaultMood("angry"))
+console.log(defaultMood())
 
 
 function intComp(a, b){
